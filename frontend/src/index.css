@@ -1,0 +1,223 @@
+/* Global Dark Theme Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #1f1f1f;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #bb86fc;
+  text-decoration: none;
+}
+.nav-links a, .nav-links button {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links button:hover {
+  color: #bb86fc;
+}
+
+/* Form Styling */
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+}
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #bb86fc;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  box-sizing: border-box;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+.form-btn {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  background-color: #bb86fc;
+  color: #121212;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.form-btn:hover {
+  background-color: #a46be5;
+}
+
+/* Item Card Styling */
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.item-card {
+  background: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(187, 134, 252, 0.3);
+}
+.item-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.item-card-content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.item-card-content h3 {
+  margin-top: 0;
+  color: #bb86fc;
+}
+.item-card-content p {
+  margin: 0.5rem 0;
+  flex-grow: 1;
+}
+.item-card-content .bid-info {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.item-card-content a {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  background-color: #03dac6;
+  color: #121212;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.item-card-content a:hover {
+  background-color: #01b8a5;
+}
+
+/* Item Detail Page */
+.item-detail-container {
+  background: #1f1f1f;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 2rem;
+  border: 1px solid #333;
+}
+.item-detail-image {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.item-detail-info {
+  flex-grow: 1;
+}
+.item-detail-info h1 {
+  color: #bb86fc;
+}
+.item-detail-info form {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+/* Bidding History Styling */
+.bidding-history {
+  flex-basis: 300px; /* Give it a fixed base width */
+  flex-shrink: 0;
+  padding-left: 2rem;
+  border-left: 1px solid #444;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.bidding-history h3 {
+  color: #bb86fc;
+  margin-top: 0;
+}
+
+.bidding-history ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bidding-history li {
+  background-color: #2c2c2c;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bidding-history li span {
+  font-weight: bold;
+}
+
+.bidding-history li small {
+  color: #aaa;
+  font-size: 0.8em;
+  width: 100%;
+  margin-top: 4px;
+}
